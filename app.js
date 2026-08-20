@@ -66,7 +66,7 @@ function getRecord(dateStr) {
 
 const EXERCISE_TYPES = [
   { key: "golf", label: "골프", icon: "⛳", varColor: "--series-golf" },
-  { key: "gx", label: "GX", icon: "🤸", varColor: "--series-gx" },
+  { key: "gx", label: "PT", icon: "🏋️", varColor: "--series-gx" },
   { key: "pilates", label: "필라테스", icon: "🧘", varColor: "--series-pilates" },
   { key: "running", label: "러닝", icon: "🏃", varColor: "--series-running" },
 ];
@@ -515,7 +515,7 @@ function renderYearly() {
 
   const exCard = document.createElement("div");
   exCard.className = "card";
-  exCard.innerHTML = `<h3>월별 운동 일수 (골프 / GX / 필라테스 / 러닝)</h3>`;
+  exCard.innerHTML = `<h3>월별 운동 일수 (골프 / PT / 필라테스 / 러닝)</h3>`;
   const exWrap = document.createElement("div");
   exCard.appendChild(exWrap);
   root.appendChild(exCard);
