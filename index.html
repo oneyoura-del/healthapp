@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>데일리 트래커</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="app-header">
+    <div class="header-top">
+      <h1>데일리 트래커</h1>
+      <div class="data-io">
+        <button id="export-btn" class="btn secondary">내보내기</button>
+        <label for="import-file" class="btn secondary">가져오기</label>
+        <input type="file" id="import-file" accept="application/json" style="display:none">
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab-btn active" data-tab="today">오늘</button>
+      <button class="tab-btn" data-tab="calendar">캘린더</button>
+      <button class="tab-btn" data-tab="monthly">월간 통계</button>
+      <button class="tab-btn" data-tab="yearly">연간 통계</button>
+      <button class="tab-btn" data-tab="pomodoro">뽀모도로</button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+
+    <!-- 오늘 -->
+    <section class="tab-panel active" id="panel-today">
+      <div id="today-root"></div>
+    </section>
+
+    <!-- 캘린더 -->
+    <section class="tab-panel" id="panel-calendar">
+      <div class="panel-nav">
+        <button id="cal-prev" class="nav-btn">◀</button>
+        <h2 id="cal-title"></h2>
+        <button id="cal-next" class="nav-btn">▶</button>
+      </div>
+      <div id="calendar-grid" class="calendar-grid"></div>
+      <div id="day-detail" class="day-detail hidden"></div>
+    </section>
+
+    <!-- 월간 통계 -->
+    <section class="tab-panel" id="panel-monthly">
+      <div class="panel-nav">
+        <button id="month-prev" class="nav-btn">◀</button>
+        <h2 id="month-title"></h2>
+        <button id="month-next" class="nav-btn">▶</button>
+      </div>
+      <div id="monthly-root"></div>
+    </section>
+
+    <!-- 연간 통계 -->
+    <section class="tab-panel" id="panel-yearly">
+      <div class="panel-nav">
+        <button id="year-prev" class="nav-btn">◀</button>
+        <h2 id="year-title"></h2>
+        <button id="year-next" class="nav-btn">▶</button>
+      </div>
+      <div id="yearly-root"></div>
+    </section>
+
+    <!-- 뽀모도로 -->
+    <section class="tab-panel" id="panel-pomodoro">
+      <div id="pomodoro-root"></div>
+    </section>
+
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
